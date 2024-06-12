@@ -53,7 +53,6 @@ fn logging() {
 /// Header of the Page
 fn header(page_title: &str) -> Markup {
     html! {
-        (DOCTYPE)
         meta charset="UTF-8";
         meta name="viewport" content="width=device-width, initial-scale=1.0";
         title { (page_title) }
@@ -65,6 +64,7 @@ fn header(page_title: &str) -> Markup {
 /// The Page, useful when wanting to use multiple Pages
 fn page(title: &str, html: Markup) -> Markup {
     html! {
+        (DOCTYPE)
         head {
             (header(title))
         }
